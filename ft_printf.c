@@ -6,7 +6,7 @@
 /*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:03:05 by hirwatan          #+#    #+#             */
-/*   Updated: 2024/11/05 13:29:43 by hirwatan         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:08:07 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			final_len += ft_search(format, i, args);
+			final_len += ft_search(format[i], args);
 		}
 		else
 			final_len += ft_putchar(format[i]);

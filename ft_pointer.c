@@ -6,7 +6,7 @@
 /*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 21:41:48 by hirwatan          #+#    #+#             */
-/*   Updated: 2024/11/05 13:07:57 by hirwatan         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:47:16 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_putnbr_base(unsigned long nbr, char *base)
 	len = 0;
 	if (nbr >= 16)
 		len += ft_putnbr_base(nbr / 16, base);
-	c = nbr % 16;
+	c = base[nbr % 16];
 	len += write(1, &c, 1);
 	return (len);
 }

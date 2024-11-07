@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
-NAME = printf.a
+NAME = libftprintf.a
 
 all: $(NAME)
 

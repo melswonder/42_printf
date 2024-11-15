@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_search.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loremipsum <loremipsum@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:14:24 by hirwatan          #+#    #+#             */
-/*   Updated: 2024/11/07 11:52:32 by loremipsum       ###   ########.fr       */
+/*   Updated: 2024/11/07 19:53:47 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 int	ft_search(int c, va_list args)
 {
 	int	len_count;
-	
+	int	va_count;
+
+	va_count = 1;
 	len_count = 0;
 	if (c == 'c')
 		len_count += ft_putchar(va_arg(args, int));
@@ -24,12 +26,10 @@ int	ft_search(int c, va_list args)
 		len_count += ft_string(va_arg(args, char *));
 	else if (c == 'p')
 		len_count += ft_pointer(va_arg(args, void *));
-	else if (c == 'd')
-		len_count += ft_decimal(va_arg(args, int));
-	else if (c == 'i')
+	else if (c == 'd' || c == 'i')
 		len_count += ft_decimal(va_arg(args, int));
 	else if (c == 'u')
-		len_count += ft_unsigned_decimal((unsigned int)va_arg(args,unsigned int));
+		len_count += ft_unsigned_decimal(va_arg(args, unsigned int));
 	else if (c == 'x')
 		len_count += ft_hexadecimal_low(va_arg(args, unsigned int));
 	else if (c == 'X')

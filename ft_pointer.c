@@ -6,15 +6,14 @@
 /*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 21:41:48 by hirwatan          #+#    #+#             */
-/*   Updated: 2024/11/06 14:47:16 by hirwatan         ###   ########.fr       */
+/*   Updated: 2024/11/07 19:56:08 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include <unistd.h>
 
-//通常は64ベースで作られているためはいりきれるようにunsigned longに入れる
-int	ft_putnbr_base(unsigned long nbr, char *base)
+static int	ft_putnbr_base(unsigned long nbr, char *base)
 {
 	int		len;
 	char	c;
@@ -27,7 +26,6 @@ int	ft_putnbr_base(unsigned long nbr, char *base)
 	return (len);
 }
 
-//通常は64ビットのバイナリ値がメモリアドレスとして使われるため16進数にする。
 int	ft_pointer(void *ptr)
 {
 	int	len;

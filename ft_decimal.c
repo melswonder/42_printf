@@ -6,7 +6,7 @@
 /*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 21:42:09 by hirwatan          #+#    #+#             */
-/*   Updated: 2024/11/06 16:45:28 by hirwatan         ###   ########.fr       */
+/*   Updated: 2024/11/07 19:17:08 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ int	ft_putnbr(int args)
 
 int	ft_decimal(int args)
 {
-	int len;
-	char c;
+	int		len;
+	char	c;
 
 	len = 0;
 	if (args == 0)

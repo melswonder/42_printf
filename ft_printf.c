@@ -6,7 +6,7 @@
 /*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 14:03:05 by hirwatan          #+#    #+#             */
-/*   Updated: 2024/11/06 20:08:07 by hirwatan         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:43:00 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	final_len = 0;
-	va_start(args, format); // 可変長引数リストの初期化
+	va_start(args, format);
+	if (!format)
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%')

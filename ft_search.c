@@ -16,9 +16,7 @@
 int	ft_search(int c, va_list args)
 {
 	int	len_count;
-	int	va_count;
 
-	va_count = 1;
 	len_count = 0;
 	if (c == 'c')
 		len_count += ft_putchar(va_arg(args, int));
